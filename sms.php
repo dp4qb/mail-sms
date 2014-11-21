@@ -16,7 +16,7 @@
     global $smsGateKey;
     global $smsGateFrom;
 
-    $result = @file_get_contents('http://bytehand.com:3800/send?id='.$smsGateId.'&key='.$smsGateKey.'&to='.urlencode($to).'&from='.urlencode($smsGateFrom).'$
+    $result = @file_get_contents('http://bytehand.com:3800/send?id='.$smsGateId.'&key='.$smsGateKey.'&to='.urlencode($to).'&from='.urlencode($smsGateFrom.'&text='.urlencode($text));
     if ($result === false)
         return false;
     else
